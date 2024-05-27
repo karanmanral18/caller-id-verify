@@ -19,8 +19,11 @@ export class DatabaseConfigService implements SequelizeOptionsFactory {
       `databases.${connectionName}`,
     );
 
-    // add all the model classes here
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     // config.sync = true;
+    // config.synchronize = true;
+    config.autoLoadModels = true;
     config.models = DefaultConnectionModels;
 
     return config;

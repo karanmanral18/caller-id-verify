@@ -26,9 +26,9 @@ export const databaseConfig = () => {
     timezone: !!process.env.DB_TIMEZONE ? process.env.DB_TIMEZONE : '+00:00',
     logging: process.env.DB_DEBUG === 'true',
     benchmark: process.env.DB_DEBUG === 'true',
-    models: [__dirname + '/../../databases/models/**'],
-    migrationDirectory: __dirname + '/../../databases/migrations',
-    seedingDirectory: __dirname + '/../../databases/seeds',
+    models: [__dirname + '/../../database/models/**'],
+    migrationDirectory: __dirname + '/../../database/migrations',
+    seedingDirectory: __dirname + '/../../database/seeds',
   } as DatabaseConnectionConfig;
   return config;
 };
