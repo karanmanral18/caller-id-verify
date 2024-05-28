@@ -4,8 +4,8 @@ import {
   SequelizeModuleOptions,
   SequelizeOptionsFactory,
 } from '@nestjs/sequelize';
-import { DefaultConnectionModels } from '@/database/model-bootstrap/default-connection-models';
-import { ConnectionNames } from '@/database/connection-names';
+import { DefaultConnectionModels } from '../../database/model-bootstrap/default-connection-models';
+import { ConnectionNames } from '../../database/connection-names';
 
 @Injectable()
 export class DatabaseConfigService implements SequelizeOptionsFactory {
@@ -22,7 +22,7 @@ export class DatabaseConfigService implements SequelizeOptionsFactory {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     // config.sync = true;
-    // config.synchronize = true;
+    config.synchronize = true;
     config.autoLoadModels = true;
     config.models = DefaultConnectionModels;
 

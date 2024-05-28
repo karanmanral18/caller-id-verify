@@ -6,6 +6,10 @@ import { getEnvFileName } from './helpers/check-env-file';
 import { DatabaseModule } from './database/database.module';
 import { ModelBootstrapModule } from './database/model-bootstrap/model-bootstrap.module';
 import { databaseConfig } from './environment/configs/databases';
+import { CliCommandsModule } from './cli-commands/cli-commands.module';
+import { UserModule } from './user/user.module';
+import { TransactionManagerModule } from './transaction-manager/transaction-manager.module';
+import { AuthModule } from './auth/auth.module';
 
 const envSuffix = !!process.env.OVERRIDE_ENV
   ? `.${process.env.OVERRIDE_ENV}`
@@ -22,6 +26,10 @@ const envFileName = getEnvFileName(envSuffix);
     }),
     DatabaseModule,
     ModelBootstrapModule,
+    CliCommandsModule,
+    UserModule,
+    TransactionManagerModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService, ConfigService],

@@ -1,4 +1,4 @@
-import { ConnectionNames } from '@/database/connection-names';
+import { ConnectionNames } from '../../database/connection-names';
 import {
   DatabaseConfig,
   DatabaseConnectionConfig,
