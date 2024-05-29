@@ -28,15 +28,6 @@ export class UserRepoService {
     private hashService: HashEncryptService,
   ) {}
 
-  public async findUserByPhone(
-    phone: string,
-    transaction?: Transaction,
-  ): Promise<UserModel | null> {
-    return this.userModel
-      .findOne({ where: { phone }, transaction })
-      .then((result) => (!!result ? result : null));
-  }
-
   public async createUserDirectly(
     userDetails: UserDataInterface,
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -63,6 +54,7 @@ export class UserRepoService {
    */
   public async createNewUser(
     user: Pick<UserModel, 'name' | 'email' | 'phone' | 'password'>,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     transaction?: Transaction,
   ): Promise<UserModel> {
     return this.userModel
@@ -72,5 +64,34 @@ export class UserRepoService {
         password: await this.hashService.createHash(user.password),
       })
       .save();
+  }
+
+  /**
+   * Finds the user or fails
+   * @param id
+   * @param transaction
+   */
+  public findOrFail(id: number, transaction?: Transaction): Promise<UserModel> {
+    return this.userModel.findByPk(id, { transaction, rejectOnEmpty: true });
+  }
+
+  public async findUserByPhone(
+    phone: string,
+    transaction?: Transaction,
+  ): Promise<UserModel | null> {
+    return this.userModel
+      .findOne({ where: { phone }, transaction })
+      .then((result) => (!!result ? result : null));
+  }
+
+  public async findUsersByName(
+    name: string,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    transaction?: Transaction,
+  ): Promise<UserModel[] | null> {
+    return this.userModel
+      .scope([{ method: ['searchUsername', name] }])
+      .scope('withoutPassword')
+      .findAll();
   }
 }
