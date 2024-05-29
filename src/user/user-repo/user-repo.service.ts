@@ -28,6 +28,15 @@ export class UserRepoService {
     private hashService: HashEncryptService,
   ) {}
 
+  public async findUserByPhone(
+    phone: string,
+    transaction?: Transaction,
+  ): Promise<UserModel | null> {
+    return this.userModel
+      .findOne({ where: { phone }, transaction })
+      .then((result) => (!!result ? result : null));
+  }
+
   public async createUserDirectly(
     userDetails: UserDataInterface,
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -43,5 +52,25 @@ export class UserRepoService {
     return this.userModel.create(userToCreate as any, {
       include: [ContactModel, SpamReportModel],
     });
+  }
+
+  /**
+   * Creates new user
+   * @param user
+   * @param profile
+   * @param transaction
+   * @private
+   */
+  public async createNewUser(
+    user: Pick<UserModel, 'name' | 'email' | 'phone' | 'password'>,
+    transaction?: Transaction,
+  ): Promise<UserModel> {
+    return this.userModel
+      .build()
+      .setAttributes(user)
+      .setAttributes({
+        password: await this.hashService.createHash(user.password),
+      })
+      .save();
   }
 }

@@ -22,7 +22,8 @@ export class DatabaseConfigService implements SequelizeOptionsFactory {
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     // config.sync = true;
-    config.synchronize = true;
+    // config.synchronize = true;
+    config.dialect = 'mysql';
     config.autoLoadModels = true;
     config.models = DefaultConnectionModels;
 
