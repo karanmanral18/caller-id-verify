@@ -1,10 +1,9 @@
-import { Match } from '@/custom-validations/match.decorator';
+import { Match } from '../custom-validations/match.decorator';
 import {
   IsEmail,
   IsNotEmpty,
   IsString,
   IsStrongPassword,
-  Matches,
 } from 'class-validator';
 
 export class RegistrationDto {

@@ -1,9 +1,9 @@
 import { ContactModel } from '../../database/models/contact.model';
 import { HashEncryptService } from '../../auth/hash-encrypt/hash-encrypt.service';
 import { UserModel } from '../../database/models/user.model';
-import { Injectable } from '@nestjs/common';
+import { ConflictException, Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/sequelize';
-import { Transaction } from 'sequelize';
+import { Op, Transaction } from 'sequelize';
 import { SpamReportModel } from '../../database/models/spam-report.model';
 
 interface UserDataInterface {
@@ -25,6 +25,7 @@ type SpamReportType = string;
 export class UserRepoService {
   constructor(
     @InjectModel(UserModel) public userModel: typeof UserModel,
+    @InjectModel(ContactModel) public contactModel: typeof ContactModel,
     private hashService: HashEncryptService,
   ) {}
 
@@ -57,6 +58,19 @@ export class UserRepoService {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     transaction?: Transaction,
   ): Promise<UserModel> {
+    const { email, phone } = user;
+
+    const existingUser = await this.userModel.findOne({
+      where: { [Op.or]: [{ email }, { phone }] },
+    });
+
+    if (existingUser) {
+      const duplicateField = existingUser.email === email ? 'email' : 'phone';
+      throw new ConflictException(
+        `A user with the provided ${duplicateField} already exists.`,
+      );
+    }
+
     return this.userModel
       .build()
       .setAttributes(user)
@@ -80,6 +94,7 @@ export class UserRepoService {
     transaction?: Transaction,
   ): Promise<UserModel | null> {
     return this.userModel
+      .unscoped()
       .findOne({ where: { phone }, transaction })
       .then((result) => (!!result ? result : null));
   }
@@ -88,10 +103,33 @@ export class UserRepoService {
     name: string,
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     transaction?: Transaction,
-  ): Promise<UserModel[] | null> {
-    return this.userModel
-      .scope([{ method: ['searchUsername', name] }])
-      .scope('withoutPassword')
+  ): Promise<UserModel[] | ContactModel[] | null> {
+    const users = await this.userModel
+      .scope([{ method: ['filterUsersByName', name] }])
       .findAll();
+
+    if (!users.length) {
+      const contacts = await this.contactModel
+        .scope([{ method: ['filterUsersByName', name] }])
+        .findAll();
+      return contacts;
+    }
+    return users;
+  }
+
+  public async findUsersByPhone(
+    name: string,
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    transaction?: Transaction,
+  ): Promise<UserModel[] | ContactModel[] | null> {
+    const users = await this.userModel
+      .scope([{ method: ['filterUsersByPhone', name] }])
+      .findAll();
+    if (!users.length) {
+      const contacts = await this.contactModel
+        .scope([{ method: ['filterUsersByPhone', name] }])
+        .findAll();
+      return contacts;
+    }
   }
 }

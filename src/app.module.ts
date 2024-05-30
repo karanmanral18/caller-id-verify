@@ -10,6 +10,7 @@ import { CliCommandsModule } from './cli-commands/cli-commands.module';
 import { UserModule } from './user/user.module';
 import { TransactionManagerModule } from './transaction-manager/transaction-manager.module';
 import { AuthModule } from './auth/auth.module';
+import { ContactModule } from './contact/contact.module';
 
 const envSuffix = !!process.env.OVERRIDE_ENV
   ? `.${process.env.OVERRIDE_ENV}`
@@ -30,6 +31,7 @@ const envFileName = getEnvFileName(envSuffix);
     UserModule,
     TransactionManagerModule,
     AuthModule,
+    ContactModule,
   ],
   controllers: [AppController],
   providers: [AppService, ConfigService],

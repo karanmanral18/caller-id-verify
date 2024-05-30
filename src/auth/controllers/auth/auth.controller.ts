@@ -1,7 +1,7 @@
-import { AuthService } from '@/auth/auth.service';
-import { LocalAuthGuard } from '@/auth/guards/local-auth.guard';
-import { LoginDto } from '@/dtos/loginDto';
-import { RegistrationDto } from '@/dtos/registrationDto';
+import { AuthService } from '../../../auth/auth.service';
+import { LocalAuthGuard } from '../../../auth/guards/local-auth.guard';
+import { LoginDto } from '../../../dtos/loginDto';
+import { RegistrationDto } from '../../../dtos/registrationDto';
 import {
   Body,
   Controller,

@@ -1,6 +1,6 @@
 import { Injectable, PipeTransform } from '@nestjs/common';
-import { UserRepoService } from '@/user/user-repo/user-repo.service';
-import { UserModel } from '@/database/models/user.model';
+import { UserRepoService } from '../../user/user-repo/user-repo.service';
+import { UserModel } from '../../database/models/user.model';
 
 @Injectable()
 export class MapToUserPipe implements PipeTransform {
