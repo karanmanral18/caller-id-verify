@@ -5,6 +5,6 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule, {
     logger: ['error', 'warn', 'log'],
   });
-  await app.listen(3000);
+  await app.listen(8000);
 }
 bootstrap();
