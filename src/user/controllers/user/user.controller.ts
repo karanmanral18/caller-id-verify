@@ -10,17 +10,22 @@ import {
   Controller,
   Get,
   Param,
+  Post,
   UseGuards,
   UseInterceptors,
+  ValidationPipe,
 } from '@nestjs/common';
 import { ContactRepoService } from '@/contact/contact-repo/contact-repo.service';
 import { ContactModel } from '@/database/models/contact.model';
+import { AddNumberToSpamDto } from '@/dtos/addNumbertoSpamDto';
+import { SpamRepoService } from '@/spam/spam-repo/spam-repo.service';
 
 @Controller('user')
 export class UserController {
   constructor(
     private userRepoService: UserRepoService,
     private contactRepoService: ContactRepoService,
+    private spamRepoService: SpamRepoService,
   ) {}
 
   @UseInterceptors(SequelizeToNotFoundInterceptor)
@@ -53,9 +58,19 @@ export class UserController {
   async searchUserByPhone(@Param('phone') phone: string) {
     let user: UserModel | ContactModel | null =
       await this.userRepoService.findUserByPhone(phone);
+
     if (!user) {
       user = await this.contactRepoService.findUserByPhone(phone);
     }
-    return user;
+    if (!user) throw new BadRequestException('Invalid user');
+    const spamCount = await this.spamRepoService.getPhoneSpamCount(user.phone);
+    return { user: user, isSpam: spamCount > 10 };
+  }
+
+  @Post('spam')
+  async addUserToSpam(
+    @Body(new ValidationPipe()) addNumberToSpamDto: AddNumberToSpamDto,
+  ) {
+    return this.spamRepoService.createNewSpamReport(addNumberToSpamDto);
   }
 }

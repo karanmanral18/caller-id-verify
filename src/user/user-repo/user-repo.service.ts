@@ -94,7 +94,6 @@ export class UserRepoService {
     transaction?: Transaction,
   ): Promise<UserModel | null> {
     return this.userModel
-      .unscoped()
       .findOne({ where: { phone }, transaction })
       .then((result) => (!!result ? result : null));
   }
