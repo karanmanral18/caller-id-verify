@@ -1,4 +1,4 @@
-import { UserRepoService } from '@/user/user-repo/user-repo.service';
+import { UserRepoService } from '../user/user-repo/user-repo.service';
 import { Injectable } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { HashEncryptService } from './hash-encrypt/hash-encrypt.service';

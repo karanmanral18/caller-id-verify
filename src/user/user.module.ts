@@ -4,7 +4,7 @@ import { HashEncryptService } from '../auth/hash-encrypt/hash-encrypt.service';
 import { UserService } from './user.service';
 import { UserController } from './controllers/user/user.controller';
 import { ContactRepoService } from '../contact/contact-repo/contact-repo.service';
-import { SpamRepoService } from '@/spam/spam-repo/spam-repo.service';
+import { SpamRepoService } from '../spam/spam-repo/spam-repo.service';
 
 @Module({
   providers: [

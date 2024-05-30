@@ -1,4 +1,4 @@
-import { ContactModel } from '@/database/models/contact.model';
+import { ContactModel } from '../../database/models/contact.model';
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/sequelize';
 import { Transaction } from 'sequelize';

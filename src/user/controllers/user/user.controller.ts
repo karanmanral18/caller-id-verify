@@ -1,4 +1,4 @@
-import { SearchUsersDto } from '@/dtos/searchUsersDto';
+import { SearchUsersDto } from '../../../dtos/searchUsersDto';
 import { JwtAuthGuard } from '../../../auth/guards/jwt-auth.guard';
 import { UserModel } from '../../../database/models/user.model';
 import { SequelizeToNotFoundInterceptor } from '../../../interceptors/not-found.interceptor';
@@ -15,10 +15,10 @@ import {
   UseInterceptors,
   ValidationPipe,
 } from '@nestjs/common';
-import { ContactRepoService } from '@/contact/contact-repo/contact-repo.service';
-import { ContactModel } from '@/database/models/contact.model';
-import { AddNumberToSpamDto } from '@/dtos/addNumbertoSpamDto';
-import { SpamRepoService } from '@/spam/spam-repo/spam-repo.service';
+import { ContactRepoService } from '../../../contact/contact-repo/contact-repo.service';
+import { ContactModel } from '../../../database/models/contact.model';
+import { AddNumberToSpamDto } from '../../../dtos/addNumbertoSpamDto';
+import { SpamRepoService } from '../../../spam/spam-repo/spam-repo.service';
 
 @Controller('user')
 export class UserController {

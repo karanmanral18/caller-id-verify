@@ -1,4 +1,4 @@
-import { SpamReportModel } from '@/database/models/spam-report.model';
+import { SpamReportModel } from '../../database/models/spam-report.model';
 import { Inject, Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/sequelize';
 import { Transaction } from 'sequelize';
