@@ -13,6 +13,7 @@ export class AuthService {
 
   async validateUser(phone: string, password: string): Promise<any> {
     const user = await this.userRepoService.findUserByPhone(phone);
+    if (!user) return null;
     // console.log(this.hashService.comparePassword(password, user.password));
     const isValidPassword = await this.hashService.comparePassword(
       password,

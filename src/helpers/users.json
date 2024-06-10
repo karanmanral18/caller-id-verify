@@ -1,426 +1,334 @@
-  {
-      "users": [
-        {
-          "name": "Jayden Jones",
-          "phone": "+1 (222) 555-0101",
-          "email": "jayden.jones@gmail.com",
-          "contacts": [
-            { "name": "Olivia Moore", "phone": "+1 (333) 555-0202" },
-            { "name": "Ethan Garcia", "phone": "+1 (444) 555-0303" },
-            { "name": "Mia Rodriguez", "phone": "+1 (555) 555-0404" }
-          ],
-          "spamReports": [
-            "+1 (666) 555-0505",
-            "+1 (777) 555-0606",
-            "+1 (888) 555-0707"
-          ]
-        },
-        {
-          "name": "Emily Brown",
-          "phone": "+1 (222) 555-0808",
-          "email": "emily.brown@gmail.com",
-          "contacts": [
-            { "name": "Noah Hernandez", "phone": "+1 (333) 555-0909" },
-            { "name": "Sophia Miller", "phone": "+1 (444) 555-1010" },
-            { "name": "William Wilson", "phone": "+1 (555) 555-1111" }
-          ],
-          "spamReports": [
-            "+1 (666) 555-1212",
-            "+1 (777) 555-1313"
-          ]
-        },
-        {
-          "name": "Liam Smith",
-          "phone": "+1 (222) 555-1414",
-          "email": "liam.smith@gmail.com",
-          "contacts": [
-            { "name": "Isabella Johnson", "phone": "+1 (333) 555-1515" },
-            { "name": "Mason Martinez", "phone": "+1 (444) 555-1616" },
-            { "name": "Ava Anderson", "phone": "+1 (555) 555-1717" }
-          ],
-          "spamReports": [
-            "+1 (666) 555-1818",
-            "+1 (777) 555-1919"
-          ]
-        },
-        {
-          "name": "Charlotte White",
-          "phone": "+1 (222) 555-2020",
-          "email": "charlotte.white@gmail.com",
-          "contacts": [
-            { "name": "Elijah Harris", "phone": "+1 (333) 555-2121" },
-            { "name": "Amelia Clark", "phone": "+1 (444) 555-2222" },
-            { "name": "James Lewis", "phone": "+1 (555) 555-2323" }
-          ],
-          "spamReports": [
-            "+1 (666) 555-2424",
-            "+1 (777) 555-2525"
-          ]
-        },
-        {
-          "name": "Aiden Walker",
-          "phone": "+1 (222) 555-2626",
-          "email": "aiden.walker@gmail.com",
-          "contacts": [
-            { "name": "Lucas Allen", "phone": "+1 (333) 555-2727" },
-            { "name": "Mila Young", "phone": "+1 (444) 555-2828" },
-            { "name": "Alexander King", "phone": "+1 (555) 555-2929" }
-          ],
-          "spamReports": [
-            "+1 (666) 555-3030",
-            "+1 (777) 555-3131"
-          ]
-        },
-        {
-          "name": "Sophia Scott",
-          "phone": "+1 (222) 555-3232",
-          "email": "sophia.scott@gmail.com",
-          "contacts": [
-            { "name": "Benjamin Green", "phone": "+1 (333) 555-3333" },
-            { "name": "Harper Baker", "phone": "+1 (444) 555-3434" },
-            { "name": "Sebastian Adams", "phone": "+1 (555) 555-3535" }
-          ],
-          "spamReports": [
-            "+1 (666) 555-3636",
-            "+1 (777) 555-3737"
-          ]
-        },
-        {
-          "name": "Isabella Nelson",
-          "phone": "+1 (222) 555-3838",
-          "email": "isabella.nelson@gmail.com",
-          "contacts": [
-            { "name": "Jack Hill", "phone": "+1 (333) 555-3939" },
-            { "name": "Ella Carter", "phone": "+1 (444) 555-4040" },
-            { "name": "Henry Mitchell", "phone": "+1 (555) 555-4141" }
-          ],
-          "spamReports": [
-            "+1 (666) 555-4242",
-            "+1 (777) 555-4343"
-          ]
-        },
-        {
-          "name": "Michael Ramirez",
-          "phone": "+1 (222) 555-4444",
-          "email": "micheal.ramirez@gmail.com",
-          "contacts": [
-            { "name": "Victoria Roberts", "phone": "+1 (333) 555-4545" },
-            { "name": "Daniel Phillips", "phone": "+1 (444) 555-4646" },
-            { "name": "Grace Campbell", "phone": "+1 (555) 555-4747" }
-          ],
-          "spamReports": [
-            "+1 (666) 555-4848",
-            "+1 (777) 555-4949"
-          ]
-        },
-        {
-          "name": "Mason Evans",
-          "phone": "+1 (222) 555-5050",
-          "email": "mason.evans@gmail.com",
-          "contacts": [
-            { "name": "Sophie Turner", "phone": "+1 (333) 555-5151" },
-            { "name": "Ryan Parker", "phone": "+1 (444) 555-5252" },
-            { "name": "Layla Edwards", "phone": "+1 (555) 555-5353" }
-          ],
-          "spamReports": [
-            "+1 (666) 555-5454",
-            "+1 (777) 555-5555"
-          ]
-        },
-        {
-          "name": "Oliver Collins",
-          "phone": "+1 (222) 555-5656",
-          "email": "oliver.collins@gmail.com",
-          "contacts": [
-            { "name": "Chloe Stewart", "phone": "+1 (333) 555-5757" },
-            { "name": "Caleb Morris", "phone": "+1 (444) 555-5858" },
-            { "name": "Zoey Rogers", "phone": "+1 (555) 555-5959" }
-          ],
-          "spamReports": [
-            "+1 (666) 555-6060",
-            "+1 (777) 555-6161"
-          ]
-        },
-        {
-          "name": "Lucas Barnes",
-          "phone": "+1 (222) 555-6262",
-          "email": "lucas.barnes@gmail.com",
-          "contacts": [
-            { "name": "Aria Reed", "phone": "+1 (333) 555-6363" },
-            { "name": "Gabriel Cook", "phone": "+1 (444) 555-6464" },
-            { "name": "Penelope Bell", "phone": "+1 (555) 555-6565" }
-          ],
-          "spamReports": [
-            "+1 (666) 555-6666",
-            "+1 (777) 555-6767"
-          ]
-        },
-        {
-          "name": "Ella Brooks",
-          "phone": "+1 (222) 555-6868",
-          "email": "ella.brooks@gmail.com",
-          "contacts": [
-            { "name": "Isaac Bailey", "phone": "+1 (333) 555-6969" },
-            { "name": "Avery Cooper", "phone": "+1 (444) 555-7070" },
-            { "name": "Matthew Rivera", "phone": "+1 (555) 555-7171" }
-          ],
-          "spamReports": [
-            "+1 (666) 555-7272",
-            "+1 (777) 555-7373"
-          ]
-        },
-        {
-          "name": "Emma Bailey",
-          "phone": "+1 (222) 555-7474",
-          "email": "emma.bailey@gmail.com",
-          "contacts": [
-            { "name": "Samuel Morris", "phone": "+1 (333) 555-7575" },
-            { "name": "Aubrey Murphy", "phone": "+1 (444) 555-7676" },
-            { "name": "Anthony Diaz", "phone": "+1 (555) 555-7777" }
-          ],
-          "spamReports": [
-            "+1 (666) 555-7878",
-            "+1 (777) 555-7979"
-          ]
-        },
-        {
-          "name": "Amelia Sanders",
-          "phone": "+1 (222) 555-8080",
-          "email": "amelia.sanders@gmail.com",
-          "contacts": [
-            { "name": "Eleanor Gray", "phone": "+1 (333) 555-8181" },
-            { "name": "Isaiah Bryant", "phone": "+1 (444) 555-8282" },
-            { "name": "Cameron Russell", "phone": "+1 (555) 555-8383" }
-          ],
-          "spamReports": [
-            "+1 (666) 555-8484",
-            "+1 (777) 555-8585"
-          ]
-        },
-        {
-          "name": "Alexander Butler",
-          "phone": "+1 (222) 555-8686",
-          "email": "alexader.bulter@gmail.com",
-          "contacts": [
-            { "name": "Zoe Griffin", "phone": "+1 (333) 555-8787" },
-            { "name": "Nora Hughes", "phone": "+1 (444) 555-8888" },
-            { "name": "Aaron Sanders", "phone": "+1 (555) 555-8989" }
-          ],
-          "spamReports": [
-            "+1 (666) 555-9090",
-            "+1 (777) 555-9191"
-          ]
-        },
-        {
-          "name": "Daniel Perez",
-          "phone": "+1 (222) 555-9292",
-          "email": "daniel.perez@gmail.com",
-          "contacts": [
-            { "name": "Emily Griffin", "phone": "+1 (333) 555-9393" },
-            { "name": "Gabriella Bennett", "phone": "+1 (444) 555-9494" },
-            { "name": "Nathan Powell", "phone": "+1 (555) 555-9595" }
-          ],
-          "spamReports": [
-            "+1 (666) 555-9696",
-            "+1 (777) 555-9797"
-          ]
-        },
-        {
-          "name": "Victoria Coleman",
-          "phone": "+1 (222) 555-9898",
-          "email": "victoria.coleman@gmail.com",
-          "contacts": [
-            { "name": "Evelyn Foster", "phone": "+1 (333) 555-9999" },
-            { "name": "Ryan Jenkins", "phone": "+1 (444) 555-0101" },
-            { "name": "Levi Perry", "phone": "+1 (555) 555-0202" }
-          ],
-          "spamReports": [
-            "+1 (666) 555-0303",
-            "+1 (777) 555-0404"
-          ]
-        },
-        {
-          "name": "Joseph Howard",
-          "phone": "+1 (222) 555-0505",
-          "email": "joseph.howard@gmail.com",
-          "contacts": [
-            { "name": "Lillian Ward", "phone": "+1 (333) 555-0606" },
-            { "name": "Eleanor Cox", "phone": "+1 (444) 555-0707" },
-            { "name": "Owen Ramirez", "phone": "+1 (555) 555-0808" }
-          ],
-          "spamReports": [
-            "+1 (666) 555-0909",
-            "+1 (777) 555-1010"
-          ]
-        },
-        {
-          "name": "Harper Bryant",
-          "phone": "+1 (222) 555-1111",
-          "email": "harper.bryant@gmail.com",
-          "contacts": [
-            { "name": "Andrew James", "phone": "+1 (333) 555-1212" },
-            { "name": "Lucy Cruz", "phone": "+1 (444) 555-1313" },
-            { "name": "Christopher Diaz", "phone": "+1 (555) 555-1414" }
-          ],
-          "spamReports": [
-            "+1 (666) 555-1515",
-            "+1 (777) 555-1616"
-          ]
-        },
-        {
-          "name": "Madison Rivera",
-          "phone": "+1 (222) 555-1717",
-          "email": "madison.rivera@gmail.com",
-          "contacts": [
-            { "name": "Victoria Patterson", "phone": "+1 (333) 555-1818" },
-            { "name": "Zachary Alexander", "phone": "+1 (444) 555-1919" },
-            { "name": "Samantha Brooks", "phone": "+1 (555) 555-2020" }
-          ],
-          "spamReports": [
-            "+1 (666) 555-2121",
-            "+1 (777) 555-2222"
-          ]
-        },
-        {
-          "name": "Sebastian Bell",
-          "phone": "+1 (222) 555-2323",
-          "email": "sebastian.bell@gmail.com",
-          "contacts": [
-            { "name": "Layla Martinez", "phone": "+1 (333) 555-2424" },
-            { "name": "Isaiah Harris", "phone": "+1 (444) 555-2525" },
-            { "name": "Elena Campbell", "phone": "+1 (555) 555-2626" }
-          ],
-          "spamReports": [
-            "+1 (666) 555-2727",
-            "+1 (777) 555-2828"
-          ]
-        },
-        {
-          "name": "Eliana Nelson",
-          "phone": "+1 (222) 555-2929",
-          "email": "eliana.nelson@gmail.com",
-          "contacts": [
-            { "name": "Levi Mitchell", "phone": "+1 (333) 555-3030" },
-            { "name": "Stella Adams", "phone": "+1 (444) 555-3131" },
-            { "name": "Caleb Parker", "phone": "+1 (555) 555-3232" }
-          ],
-          "spamReports": [
-            "+1 (666) 555-3333",
-            "+1 (777) 555-3434"
-          ]
-        },
-        {
-          "name": "Grace Thomas",
-          "phone": "+1 (222) 555-3535",
-          "email": "grace.thomas@gmail.com",
-          "contacts": [
-            { "name": "Isaac Allen", "phone": "+1 (333) 555-3636" },
-            { "name": "Anna Young", "phone": "+1 (444) 555-3737" },
-            { "name": "David Hall", "phone": "+1 (555) 555-3838" }
-          ],
-          "spamReports": [
-            "+1 (666) 555-3939",
-            "+1 (777) 555-4040"
-          ]
-        },
-        {
-          "name": "Henry Phillips",
-          "phone": "+1 (222) 555-4141",
-          "email": "henry.phillips@gmail.com",
-          "contacts": [
-            { "name": "Charlotte Lewis", "phone": "+1 (333) 555-4242" },
-            { "name": "Aria King", "phone": "+1 (444) 555-4343" },
-            { "name": "Samuel Wright", "phone": "+1 (555) 555-4444" }
-          ],
-          "spamReports": [
-            "+1 (666) 555-4545",
-            "+1 (777) 555-4646"
-          ]
-        },
-        {
-          "name": "Abigail Gonzalez",
-          "phone": "+1 (222) 555-4747",
-          "email": "abigail.gonzalez@gmail.com",
-          "contacts": [
-            { "name": "Anthony Lee", "phone": "+1 (333) 555-4848" },
-            { "name": "Sophie Walker", "phone": "+1 (444) 555-4949" },
-            { "name": "Daniel Harris", "phone": "+1 (555) 555-5050" }
-          ],
-          "spamReports": [
-            "+1 (666) 555-5151",
-            "+1 (777) 555-5252"
-          ]
-        },
-        {
-          "name": "Matthew Johnson",
-          "phone": "+1 (222) 555-5353",
-          "email": "matthew.johnson@gmail.com",
-          "contacts": [
-            { "name": "Stella Walker", "phone": "+1 (333) 555-5454" },
-            { "name": "Owen Green", "phone": "+1 (444) 555-5555" },
-            { "name": "Amelia Lewis", "phone": "+1 (555) 555-5656" }
-          ],
-          "spamReports": [
-            "+1 (666) 555-5757",
-            "+1 (777) 555-5858"
-          ]
-        },
-        {
-          "name": "Mila Allen",
-          "phone": "+1 (222) 555-5959",
-          "email": "mila.allen@gmail.com",
-          "contacts": [
-            { "name": "Joshua Young", "phone": "+1 (333) 555-6060" },
-            { "name": "Madison Sanchez", "phone": "+1 (444) 555-6161" },
-            { "name": "Elijah Thomas", "phone": "+1 (555) 555-6262" }
-          ],
-          "spamReports": [
-            "+1 (666) 555-6363",
-            "+1 (777) 555-6464"
-          ]
-        },
-        {
-          "name": "Chloe Wilson",
-          "phone": "+1 (222) 555-6565",
-          "email": "chloe.wilson@gmail.com",
-          "contacts": [
-            { "name": "Ethan Clark", "phone": "+1 (333) 555-6666" },
-            { "name": "Ava Martinez", "phone": "+1 (444) 555-6767" },
-            { "name": "Lillian King", "phone": "+1 (555) 555-6868" }
-          ],
-          "spamReports": [
-            "+1 (666) 555-6969",
-            "+1 (777) 555-7070"
-          ]
-        },
-        {
-          "name": "Sophia Anderson",
-          "phone": "+1 (222) 555-7171",
-          "email": "sophia.anderson@gmail.com",
-          "contacts": [
-            { "name": "Michael Clark", "phone": "+1 (333) 555-7272" },
-            { "name": "Mason Lewis", "phone": "+1 (444) 555-7373" },
-            { "name": "Harper Allen", "phone": "+1 (555) 555-7474" }
-          ],
-          "spamReports": [
-            "+1 (666) 555-7575",
-            "+1 (777) 555-7676"
-          ]
-        },
-        {
-          "name": "Evelyn Lee",
-          "phone": "+1 (222) 555-9999",
-          "email": "evelyn.lee@gmail.com",
-          "contacts": [
-            { "name": "David Davis", "phone": "+1 (333) 555-8888" },
-            { "name": "Madison Lewis", "phone": "+1 (444) 555-7777" },
-            { "name": "Lucas Thomas", "phone": "+1 (555) 555-6666" }
-          ],
-          "spamReports": [
-            "+1 (666) 555-5555",
-            "+1 (777) 555-4444"
-          ]
-        }
-      ]
+{
+  "users": [
+    {
+      "name": "JaydenJones",
+      "phone": "12225550101",
+      "email": "jayden.jones@gmail.com",
+      "contacts": [
+        { "name": "OliviaMoore", "phone": "13335550202" },
+        { "name": "EthanGarcia", "phone": "14445550303" },
+        { "name": "MiaRodriguez", "phone": "15555550404" }
+      ],
+      "spamReports": ["16665550505", "17775550606", "18885550707"]
+    },
+    {
+      "name": "EmilyBrown",
+      "phone": "12225550808",
+      "email": "emily.brown@gmail.com",
+      "contacts": [
+        { "name": "NoahHernandez", "phone": "13335550909" },
+        { "name": "SophiaMiller", "phone": "14445551010" },
+        { "name": "WilliamWilson", "phone": "15555551111" }
+      ],
+      "spamReports": ["16665551212", "17775551313"]
+    },
+    {
+      "name": "LiamSmith",
+      "phone": "12225551414",
+      "email": "liam.smith@gmail.com",
+      "contacts": [
+        { "name": "IsabellaJohnson", "phone": "13335551515" },
+        { "name": "MasonMartinez", "phone": "14445551616" },
+        { "name": "AvaAnderson", "phone": "15555551717" }
+      ],
+      "spamReports": ["16665551818", "17775551919"]
+    },
+    {
+      "name": "CharlotteWhite",
+      "phone": "12225552020",
+      "email": "charlotte.white@gmail.com",
+      "contacts": [
+        { "name": "ElijahHarris", "phone": "13335552121" },
+        { "name": "AmeliaClark", "phone": "14445552222" },
+        { "name": "JamesLewis", "phone": "15555552323" }
+      ],
+      "spamReports": ["16665552424", "17775552525"]
+    },
+    {
+      "name": "AidenWalker",
+      "phone": "12225552626",
+      "email": "aiden.walker@gmail.com",
+      "contacts": [
+        { "name": "LucasAllen", "phone": "13335552727" },
+        { "name": "MilaYoung", "phone": "14445552828" },
+        { "name": "AlexanderKing", "phone": "15555552929" }
+      ],
+      "spamReports": ["16665553030", "17775553131"]
+    },
+    {
+      "name": "SophiaScott",
+      "phone": "12225553232",
+      "email": "sophia.scott@gmail.com",
+      "contacts": [
+        { "name": "BenjaminGreen", "phone": "13335553333" },
+        { "name": "HarperBaker", "phone": "14445553434" },
+        { "name": "SebastianAdams", "phone": "15555553535" }
+      ],
+      "spamReports": ["16665553636", "17775553737"]
+    },
+    {
+      "name": "IsabellaNelson",
+      "phone": "12225553838",
+      "email": "isabella.nelson@gmail.com",
+      "contacts": [
+        { "name": "JackHill", "phone": "13335553939" },
+        { "name": "EllaCarter", "phone": "14445554040" },
+        { "name": "HenryMitchell", "phone": "15555554141" }
+      ],
+      "spamReports": ["16665554242", "17775554343"]
+    },
+    {
+      "name": "MichaelRamirez",
+      "phone": "12225554444",
+      "email": "micheal.ramirez@gmail.com",
+      "contacts": [
+        { "name": "VictoriaRoberts", "phone": "13335554545" },
+        { "name": "DanielPhillips", "phone": "14445554646" },
+        { "name": "GraceCampbell", "phone": "15555554747" }
+      ],
+      "spamReports": ["16665554848", "17775554949"]
+    },
+    {
+      "name": "MasonEvans",
+      "phone": "12225555050",
+      "email": "mason.evans@gmail.com",
+      "contacts": [
+        { "name": "SophieTurner", "phone": "13335555151" },
+        { "name": "RyanParker", "phone": "14445555252" },
+        { "name": "LaylaEdwards", "phone": "15555555353" }
+      ],
+      "spamReports": ["16665555454", "17775555555"]
+    },
+    {
+      "name": "OliverCollins",
+      "phone": "12225555656",
+      "email": "oliver.collins@gmail.com",
+      "contacts": [
+        { "name": "ChloeStewart", "phone": "13335555757" },
+        { "name": "CalebMorris", "phone": "14445555858" },
+        { "name": "ZoeyRogers", "phone": "15555555959" }
+      ],
+      "spamReports": ["16665556060", "17775556161"]
+    },
+    {
+      "name": "LucasBarnes",
+      "phone": "12225556262",
+      "email": "lucas.barnes@gmail.com",
+      "contacts": [
+        { "name": "AriaReed", "phone": "13335556363" },
+        { "name": "GabrielCook", "phone": "14445556464" },
+        { "name": "PenelopeBell", "phone": "15555556565" }
+      ],
+      "spamReports": ["16665556666", "17775556767"]
+    },
+    {
+      "name": "EllaBrooks",
+      "phone": "12225556868",
+      "email": "ella.brooks@gmail.com",
+      "contacts": [
+        { "name": "IsaacBailey", "phone": "13335556969" },
+        { "name": "AveryCooper", "phone": "14445557070" },
+        { "name": "MatthewRivera", "phone": "15555557171" }
+      ],
+      "spamReports": ["16665557272", "17775557373"]
+    },
+    {
+      "name": "EmmaBailey",
+      "phone": "12225557474",
+      "email": "emma.bailey@gmail.com",
+      "contacts": [
+        { "name": "SamuelMorris", "phone": "13335557575" },
+        { "name": "AubreyMurphy", "phone": "14445557676" },
+        { "name": "AnthonyDiaz", "phone": "15555557777" }
+      ],
+      "spamReports": ["16665557878", "17775557979"]
+    },
+    {
+      "name": "AmeliaSanders",
+      "phone": "12225558080",
+      "email": "amelia.sanders@gmail.com",
+      "contacts": [
+        { "name": "EleanorGray", "phone": "13335558181" },
+        { "name": "IsaiahBryant", "phone": "14445558282" },
+        { "name": "CameronRussell", "phone": "15555558383" }
+      ],
+      "spamReports": ["16665558484", "17775558585"]
+    },
+    {
+      "name": "AlexanderButler",
+      "phone": "12225558686",
+      "email": "alexader.bulter@gmail.com",
+      "contacts": [
+        { "name": "ZoeGriffin", "phone": "13335558787" },
+        { "name": "NoraHughes", "phone": "14445558888" },
+        { "name": "AaronSanders", "phone": "15555558989" }
+      ],
+      "spamReports": ["16665559090", "17775559191"]
+    },
+    {
+      "name": "DanielPerez",
+      "phone": "12225559292",
+      "email": "daniel.perez@gmail.com",
+      "contacts": [
+        { "name": "EmilyGriffin", "phone": "13335559393" },
+        { "name": "GabriellaBennett", "phone": "14445559494" },
+        { "name": "NathanPowell", "phone": "15555559595" }
+      ],
+      "spamReports": ["16665559696", "17775559797"]
+    },
+    {
+      "name": "VictoriaColeman",
+      "phone": "12225559898",
+      "email": "victoria.coleman@gmail.com",
+      "contacts": [
+        { "name": "EvelynFoster", "phone": "13335559999" },
+        { "name": "RyanJenkins", "phone": "14445550101" },
+        { "name": "LeviPerry", "phone": "15555550202" }
+      ],
+      "spamReports": ["16665550303", "17775550404"]
+    },
+    {
+      "name": "JosephHoward",
+      "phone": "12225550505",
+      "email": "joseph.howard@gmail.com",
+      "contacts": [
+        { "name": "LillianWard", "phone": "13335550606" },
+        { "name": "EleanorCox", "phone": "14445550707" },
+        { "name": "OwenRamirez", "phone": "15555550808" }
+      ],
+      "spamReports": ["16665550909", "17775551010"]
+    },
+    {
+      "name": "HarperBryant",
+      "phone": "12225551111",
+      "email": "harper.bryant@gmail.com",
+      "contacts": [
+        { "name": "AndrewJames", "phone": "13335551212" },
+        { "name": "LucyCruz", "phone": "14445551313" },
+        { "name": "ChristopherDiaz", "phone": "15555551414" }
+      ],
+      "spamReports": ["16665551515", "17775551616"]
+    },
+    {
+      "name": "MadisonRivera",
+      "phone": "12225551717",
+      "email": "madison.rivera@gmail.com",
+      "contacts": [
+        { "name": "VictoriaPatterson", "phone": "13335551818" },
+        { "name": "ZacharyAlexander", "phone": "14445551919" },
+        { "name": "SamanthaBrooks", "phone": "15555552020" }
+      ],
+      "spamReports": ["16665552121", "17775552222"]
+    },
+    {
+      "name": "SebastianBell",
+      "phone": "12225552323",
+      "email": "sebastian.bell@gmail.com",
+      "contacts": [
+        { "name": "LaylaMartinez", "phone": "13335552424" },
+        { "name": "IsaiahHarris", "phone": "14445552525" },
+        { "name": "ElenaCampbell", "phone": "15555552626" }
+      ],
+      "spamReports": ["16665552727", "17775552828"]
+    },
+    {
+      "name": "ElianaNelson",
+      "phone": "12225552929",
+      "email": "eliana.nelson@gmail.com",
+      "contacts": [
+        { "name": "LeviMitchell", "phone": "13335553030" },
+        { "name": "StellaAdams", "phone": "14445553131" },
+        { "name": "CalebParker", "phone": "15555553232" }
+      ],
+      "spamReports": ["16665553333", "17775553434"]
+    },
+    {
+      "name": "GraceThomas",
+      "phone": "12225553535",
+      "email": "grace.thomas@gmail.com",
+      "contacts": [
+        { "name": "IsaacAllen", "phone": "13335553636" },
+        { "name": "AnnaYoung", "phone": "14445553737" },
+        { "name": "DavidHall", "phone": "15555553838" }
+      ],
+      "spamReports": ["16665553939", "17775554040"]
+    },
+    {
+      "name": "HenryPhillips",
+      "phone": "12225554141",
+      "email": "henry.phillips@gmail.com",
+      "contacts": [
+        { "name": "CharlotteLewis", "phone": "13335554242" },
+        { "name": "AriaKing", "phone": "14445554343" },
+        { "name": "SamuelWright", "phone": "15555554444" }
+      ],
+      "spamReports": ["16665554545", "17775554646"]
+    },
+    {
+      "name": "AbigailGonzalez",
+      "phone": "12225554747",
+      "email": "abigail.gonzalez@gmail.com",
+      "contacts": [
+        { "name": "AnthonyLee", "phone": "13335554848" },
+        { "name": "SophieWalker", "phone": "14445554949" },
+        { "name": "DanielHarris", "phone": "15555555050" }
+      ],
+      "spamReports": ["16665555151", "17775555252"]
+    },
+    {
+      "name": "MatthewJohnson",
+      "phone": "12225555353",
+      "email": "matthew.johnson@gmail.com",
+      "contacts": [
+        { "name": "StellaWalker", "phone": "13335555454" },
+        { "name": "OwenGreen", "phone": "14445555555" },
+        { "name": "AmeliaLewis", "phone": "15555555656" }
+      ],
+      "spamReports": ["16665555757", "17775555858"]
+    },
+    {
+      "name": "MilaAllen",
+      "phone": "12225555959",
+      "email": "mila.allen@gmail.com",
+      "contacts": [
+        { "name": "JoshuaYoung", "phone": "13335556060" },
+        { "name": "MadisonSanchez", "phone": "14445556161" },
+        { "name": "ElijahThomas", "phone": "15555556262" }
+      ],
+      "spamReports": ["16665556363", "17775556464"]
+    },
+    {
+      "name": "ChloeWilson",
+      "phone": "12225556565",
+      "email": "chloe.wilson@gmail.com",
+      "contacts": [
+        { "name": "EthanClark", "phone": "13335556666" },
+        { "name": "AvaMartinez", "phone": "14445556767" },
+        { "name": "LillianKing", "phone": "15555556868" }
+      ],
+      "spamReports": ["16665556969", "17775557070"]
+    },
+    {
+      "name": "SophiaAnderson",
+      "phone": "12225557171",
+      "email": "sophia.anderson@gmail.com",
+      "contacts": [
+        { "name": "MichaelClark", "phone": "13335557272" },
+        { "name": "MasonLewis", "phone": "14445557373" },
+        { "name": "HarperAllen", "phone": "15555557474" }
+      ],
+      "spamReports": ["16665557575", "17775557676"]
+    },
+    {
+      "name": "EvelynLee",
+      "phone": "12225559999",
+      "email": "evelyn.lee@gmail.com",
+      "contacts": [
+        { "name": "DavidDavis", "phone": "13335558888" },
+        { "name": "MadisonLewis", "phone": "14445557777" },
+        { "name": "LucasThomas", "phone": "15555556666" }
+      ],
+      "spamReports": ["16665555555", "17775554444"]
     }
-    
+  ]
+}
