@@ -2,12 +2,11 @@ import { Match } from '../custom-validations/match.decorator';
 import {
   IsEmail,
   IsNotEmpty,
-  IsNumber,
   IsString,
   IsStrongPassword,
-  Max,
-  Min,
+  Validate,
 } from 'class-validator';
+import { isValidPhone } from '../custom-validations/isValidPhone';
 
 export class RegistrationDto {
   @IsNotEmpty()
@@ -18,10 +17,9 @@ export class RegistrationDto {
   @IsEmail()
   public email: string;
 
+  @Validate(isValidPhone)
   @IsNotEmpty()
-  @IsNumber()
-  @Min(7)
-  @Max(12)
+  @IsString()
   public phone: string;
 
   @IsNotEmpty()
